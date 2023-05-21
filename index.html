@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 400px;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .search-bar {
+            width: 400px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 15px;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .search-button {
+            width: 400px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<img class="logo" src="Assets/KMD_Logo.png" alt="Kathmandu Outdoor Logo">
+
+<div class="search-container">
+    <input class="search-bar" type="text" name="q" placeholder="Enter your search term" required>
+    <button class="search-button" type="submit">Search</button>
+</div>
+
+<script>
+    document.querySelector(".search-container").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var searchTerm = document.querySelector(".search-bar").value;
+        window.location.href = "https://www.kathmandu.co.nz/shop?q=" + encodeURIComponent(searchTerm);
+    });
+
+    document.querySelector(".search-container").addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.key === "Enter") {
+            var searchTerm = document.querySelector(".search-bar").value;
+            window.location.href = "https://www.kathmandu.co.nz/shop?q=" + encodeURIComponent(searchTerm);
+        }
+    });
+</script>
+</body>
+</html>
