@@ -31,7 +31,6 @@
             border-radius: 15px;
             border: none;
             margin-bottom: 20px;
-
         }
 
         .search-button {
@@ -46,6 +45,15 @@
             justify-content: center;
             align-items: center;
         }
+
+        .tiny-text {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            font-size: 20px;
+            color: #353535;
+            cursor: pointer;
+        }
     </style>
     <title>KMD Quick Search</title>
     <link rel="icon" type="image/x-icon" href="/Assets/favicon.png">
@@ -59,6 +67,8 @@
         <button class="search-button" type="submit">Search</button>
     </form>
 </div>
+
+<span class="tiny-text" onclick="window.location.href='https://github.com/Animeboynz/Kathmandu-Quick-Search'">Created by Roshan Varughese</span>
 
 <script>
     document.getElementById("search-form").addEventListener("submit", function(event) {
