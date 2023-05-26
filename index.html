@@ -7,7 +7,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 98vh;
             background-color: #222;
             color: #fff;
             font-family: Arial, sans-serif;
@@ -31,16 +31,20 @@
             border-radius: 15px;
             border: none;
             margin-bottom: 20px;
+
         }
 
         .search-button {
-            width: 400px;
+            width: 410px;
             height: 40px;
             border-radius: 15px;
             border: none;
             background-color: #4CAF50;
             color: white;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
     <title>KMD Quick Search</title>
@@ -50,18 +54,20 @@
 <img class="logo" src="Assets/KMD_Logo.png" alt="Kathmandu Outdoor Logo">
 
 <div class="search-container">
-    <input class="search-bar" type="text" name="q" placeholder="Enter your search term" required>
-    <button class="search-button" type="submit">Search</button>
+    <form id="search-form">
+        <input class="search-bar" type="text" name="q" placeholder="Enter your search term" required autofocus>
+        <button class="search-button" type="submit">Search</button>
+    </form>
 </div>
 
 <script>
-    document.querySelector(".search-container").addEventListener("submit", function(event) {
+    document.getElementById("search-form").addEventListener("submit", function(event) {
         event.preventDefault();
         var searchTerm = document.querySelector(".search-bar").value;
         window.location.href = "https://www.kathmandu.co.nz/shop?q=" + encodeURIComponent(searchTerm);
     });
 
-    document.querySelector(".search-container").addEventListener("keyup", function(event) {
+    document.getElementById("search-form").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === "Enter") {
             var searchTerm = document.querySelector(".search-bar").value;
