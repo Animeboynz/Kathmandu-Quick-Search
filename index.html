@@ -54,6 +54,45 @@
             color: #353535;
             cursor: pointer;
         }
+        .clearance {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            font-size: 30px;
+            color: #e56f00;
+            cursor: pointer;
+        }
+        .clearance-button-old {
+            width: 410px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            background-color: #e56f00;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 10px;
+        }
+
+        .clearance-button {
+            width: 410px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            background-color: #e56f00;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            text-decoration: none; /* Remove underline */
+            font-family: Arial, sans-serif; /* Set the desired font */
+            font-size: 13px; /* Set the desired font size */
+        }
     </style>
     <title>KMD Quick Search</title>
     <link rel="icon" type="image/x-icon" href="/Assets/favicon.png">
@@ -65,6 +104,7 @@
     <form id="search-form">
         <input class="search-bar" type="text" name="q" placeholder="Enter your search term" required autofocus>
         <button class="search-button" type="submit">Search</button>
+        <a class="clearance-button" href="https://label.offsite.store/">Check out the new Clearance Label Generator</a>
     </form>
 </div>
 
