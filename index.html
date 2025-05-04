@@ -123,14 +123,14 @@
     document.getElementById("search-form").addEventListener("submit", function(event) {
         event.preventDefault();
         var searchTerm = document.querySelector(".search-bar").value;
-        window.location.href = "https://www.kathmandu.co.nz/shop?q=" + encodeURIComponent(searchTerm);
+        window.location.href = "https://www.kathmandu.co.nz/search?query=" + encodeURIComponent(searchTerm);
     });
 
     document.getElementById("search-form").addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.key === "Enter") {
             var searchTerm = document.querySelector(".search-bar").value;
-            window.location.href = "https://www.kathmandu.co.nz/shop?q=" + encodeURIComponent(searchTerm);
+            window.location.href = "https://www.kathmandu.co.nz/search?query=" + encodeURIComponent(searchTerm);
         }
     });
 </script>
